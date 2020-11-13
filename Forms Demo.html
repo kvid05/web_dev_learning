@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<h1>Forms Demo</h1>
+<body>
+    <form action="/tacos">
+        <p>
+        <label for="Username">Enter Username</label>
+        <input type="text" placeholder="Username" id="Username" name="Username"
+        </p>
+        <p>
+        <label for="Password">Enter Password</label>
+        <input type="password" placeholder="Password" id="Password" name="Password">
+        </p>
+        <p>
+        <label for="color">Choose Color</label>
+        <input type="color" id="color" name="color">
+        </p>
+        <p>
+        <label for="number">Number</label>
+        <input type="number" placeholder="Enter a Number" id="number" name="num" min="1" max="200">
+        </p>
+        <!--submits form-->
+        <button>SUBMIT</button>
+        <!--doesn't submit form-->
+        <button type="button">DON'T SUBMIT</button>
+        <!--submits form again-->
+        <button type="submit">SUBMIT AGAIN</button>
+    </form>
+    <hr>
+    <button>Outside of form</button>
+    <h2>HIJACKING SEARCH</h2>
+    <h3>GOOGLE SEARCH</h3>
+    <form action="https://www.google.com/search?">
+        <input type="text" id="q" name="q">
+        <button>SEARCH GOOGLE</button>
+    </form>
+    <h3>YOUTUBE SEARCH</h3>
+    <form action="https://www.youtube.com/results?">
+        <input type="text" id="search_query" name="search_query">
+        <button>SEARCH YOUTUBE</button>
+    </form>
+    <h3>REDDIT SEARCH</h3>
+    <form action="https://www.reddit.com/search/?">
+        <input type="text" id="q" name="q">
+        <button>SEARCH REDDIT</button>
+    </form>
+    <form action="/utah">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree to everything!</label>
+        <p>
+            <label for="s">S</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M</label>
+            <input type="radio" name="size" id="m" value="m">
+            <label for="l">L</label>
+            <input type="radio" name="size" id="l" value="l">
+        </p>
+        <p>
+            <label for="dinty">Dinner Type</label>
+            <select name="dinner" id="dinty">
+                <option value="">Please Choose</option>
+                <option value="chx">Chicken</option>
+                <option value="stk">Steak</option>
+                <option value="vgt">Vegeterian</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese</label>
+            <input type="range" id="cheese" name="cheese" min="1" max="10" value="4" step="2">
+        </p>
+        <p>
+            <label for="rq">Special Requests</label>
+            <textarea name="request" id="rq" cols="30" rows="10"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+    <hr>
+    <h2>Validation Demo</h2>
+    <form action="/florida">
+    <label for="usr">Username</label>
+    <input type="text" id="usr" name="usr" placeholder="Username" required>
+        <p>
+            <label for="psswrd">Password</label>
+            <input type="password" id="psswrd" name="psswrd" placeholder="Password" minlength="6" maxlength="18" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </p>
+        <p>
+            <button>Submit</button>
+        </p>
+    </form>
+    
+</body>
+</html>
